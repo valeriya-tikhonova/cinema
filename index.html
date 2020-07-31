@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,163 +8,135 @@
 </head>
 <body>
 
-<!--форма для ввода инфы-->
-    <form action="/api/user/create">
-        <div>
-           <input type="text" value="тут текст" mame="text" required> <!--обязательное поле--> 
-        </div>
-        <div>
-            <input type="email" placeholder="Email" name="email">
-        </div>
-        <div>
-            <input type="text" placeholder="Подсказка" name="text">   
-        </div>
-        <div>
-            <input type="tel"> <!-- ввод телефона через валидацию js-->    
-        </div>
-        
-       
-<!-- выбор ниспадающим списком-->
-    <div>
-       <select name="" id="">
-            <option value="1">выбор 1</option>
-            <option value="2">выбор 2</option>
-            <option value="3">выбор 3</option>
-        </select>
-    </div>
-<!--точки с выбором-->
-        <div>
-
-            <div>
-              <input type="radio" name="radio">   
-            </div>
-            <div>
-                <input type="radio" name="radio">   
-            </div>
-            <div>
-                <input type="radio" name="radio">   
-            </div>
-        </div>
-
-
-        <textarea name="" placeholder="Комментарий"></textarea> <!-- стилизация  cols="38" rows="10"> необязательна, используется css-->
-        <label for=""> выбери значение </label> 
-        <input id="select" type="checkbox" name="select">
-
-            <input type="file" name="file"><!-- прикрепление файлов --> 
-            <input type="submit"> <!-- кнопка отправить -->
-            <button type="submit">  Кнопочка отправки </button>
-           
-    </form>
-
-<br>
-<br> <!-- Заголовки -->
-    <h1>Курсы</h1>
-    <h2>backend</h2>
-    <h2>frontend</h2>
-    <h4></h4>
-    <h5></h5>
-<br> 
-<!-- таблица-->
-<style> 
-    th, td {
-    border: 1 px solid black;
-    padding: 5 px 10 px;
-}
-</style> 
-
-<table>
-    <caption>Фильмы, которые показывают в кинотеатре</caption>
-    <thead>
-        <tr> <!-- строка--> 
-            <th> <!-- ячейка--> check</th>
-            <th> Начало сеанса</th>
-            <th> название фильма </th>
-            <th> жанр </th>
-            <th> заказать билет</th>
-        </tr>
-    </thead>    
-<tr>
-    <td> <!-- ячейка--> check</td>
-    <td> 10:00</td>
-    <td> человек-паук </td>
-    <td> трейлер </td>
-    <td> заказать билет</td>
-</tr>
-<tr>
-    <td> <!-- ячейка--> check</td>
-    <td> 12:00</td>
-    <td> Собачья жизнь </td>
-    <td> драма </td>
-    <td> заказать билет</td>
-</tr>
-<tr>
-    <td> <!-- ячейка--> check</td>
-    <td> 15:00</td>
-    <td> история игрушек</td>
-    <td> мультфильм</td>
-    <td> заказать билет</td>
-</tr>
-</table>
-
-<br>
-
     <!-- первый экран-->
-<style>
-  span {
-      color: coral;
-  }  
-</style> 
-<div>
-
-   <h1> Иннополис </h1>
-    <div>
+<header>
+    
         <div style="float: left; margin-right: 20px; background-color: cornflowerblue;">
-            <img src="img/logo.png" alt= "logotip"> 
+        <a href="http://university.innopolis.ru/" target ="_blank"> <img src="img/logo.png" alt= "cinema innopolis university" > 
+            <!-- target ="_blank" открывает гиперссылку в новом окне-->
         </div>
-        <div>
-         <span style="color:blueviolet">  ЗАКАЗАТЬ БИЛЕТ ПРЕИМУЩЕСТВА ФИЛЬМЫ КОНТАКТЫ  </span>
-   
-        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">ЗАКАЗАТЬ БИЛЕТ</a>
+                </li>
+                <li>
+                    <a href="#">ПРЕИМУЩЕСТВА </href>
+                </li>
+                <li>    
+                    <a href="#">ФИЛЬМЫ</a>
+                </li>
+                <li>
+                    <a href="#">КОНТАКТЫ</a>
+                </li>
+            </ul> 
+        </nav>
+
         <div style="float: left; margin-right: 20px;">
          Ваш город:<span> <strong>Москва</strong></span>    
         </div>
-    </div>
-    <div>
+</header>
+<main>
+<br>
+    <section>
         <h2>Закажите билет в кино</h2>
         <p><h2>Всем покупателям <span> подарок!</span></h2></p> 
-    </div> 
- </div> 
+    </section> 
+  
 <!-- конец первого экрана-->
     
-<!-- второй экран-->   
-    <div> 
-    <h2> Добро пожаловать!</h2>
+<!-- второй экран--> 
+  
+    <section> 
+        <h2> Добро пожаловать!</h2>
 
-    <p>Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus. </p>
-    <p>Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus. </p>
-    </div>
+        <p>Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus. </p>
+        <p>Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus. </p>
+    </section>
 
-<div>
+<section>
     <div>
        <h3>Почему мы?</h3>     
     </div>
    <div>
+       <img src="img/b2_icon_1.jpg" alt="icon_1">
+
         <div>
-            <h4>Большие экраны </h4>
+            <h4><i>Большие экраны </i> </h4>
             <p> ipsum dolor sit amet, consectetur adipisicing elit. At autem cum dolores dolorum eius error expedita illum itaque molestiae mollitia nemo, nostrum officia quas ratione tempora temporibus veritatis vero voluptates.</p> 
-         </div>
+        </div>
+        <img src="img/b2_icon_2.jpg" alt="icon_2">
         <div>
             <h4>Объемный звук </h4>
            <p>Lorem ipsum dolor sit amet. </p>   
         </div>
+        <img src="img/b2_icon_3.jpg" alt="icon_3">
         <div>
             <h4> Удобные кресла </h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem cum dolores dolorum eius error expedita illum itaque molestiae mollitia nemo, nostrum officia quas ratione tempora temporibus veritatis vero voluptates.</p>
         </div>
-
    </div> 
-</div> 
+</section> 
 <!-- конец второго экрана-->
+
+<!-- начало экрана с таблицей-->
+<section>
+    
+<style> 
+    th, td {
+    border: 1 px solid black;
+    padding: 5 px 10 px;
+    }
+    </style> 
+    
+    <table>
+    <caption><b>Выберите фильм</b></caption>
+    <thead>
+        <tr> <!-- строка--> 
+            <th> <!-- ячейка--> check</th>
+            <th> Начало сеанса</th>
+            <th> Название фильма </th>
+            <th> Жанр </th>
+            <th> Заказать билет</th>
+        </tr>
+    </thead>    
+    <tr>
+    <td> <!-- ячейка--> check</td>
+    <td> 10:00</td>
+    <td><a href="https://www.kinopoisk.ru/film/838/"> Человек-паук</a></td>
+    <td> фантастика, боевик, приключение </td>
+    <td> заказать билет</td>
+    </tr>
+    <tr>
+    <td> <!-- ячейка--> check</td>
+    <td> 12:00</td>
+    <td><a href="https://www.kinopoisk.ru/film/571896/"> Собачья жизнь</a></td>
+    <td> фэнтези, драма, комедия </td>
+    <td> заказать билет</td>
+    </tr>
+    <tr>
+    <td> <!-- ячейка--> check</td>
+    <td> 14:00</td>
+    <td><a href="https://www.kinopoisk.ru/film/482/"> История игрушек</a></td>
+    <td> мультфильм, фэнтези, комедия</td>
+    <td> заказать билет</td>
+    </tr>
+    <tr>
+        <td> <!-- ячейка--> check</td>
+        <td> 16:00</td>
+        <td><a href="https://www.kinopoisk.ru/film/693730/">Люди в черном: Интернэшнл </a></td>
+        <td>фантастика, боевик, комедия</td>
+        <td> заказать билет</td>
+        </tr>
+</table>
+</section>
+<!-- конец экрана с таблицей-->
+</main>
+
+<footer>
+
+</footer>
+
 </body>
 </html>
