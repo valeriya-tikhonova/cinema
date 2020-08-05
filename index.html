@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link ref="stylesheet" href="css/main.css">
 </head>
 <body>
 
@@ -82,60 +84,51 @@
 
 <!-- начало экрана с таблицей-->
 <section>
-    
-<style> 
-    th, td {
-    border: 1 px solid black;
-    padding: 5 px 10 px;
-    }
-    </style> 
-    
-    <table>
-    <caption><b>Выберите фильм</b></caption>
-    <thead>
-        <tr> <!-- строка--> 
-            <th> <!-- ячейка--> check</th>
-            <th> Начало сеанса</th>
-            <th> Название фильма </th>
-            <th> Жанр </th>
-            <th> Заказать билет</th>
+    <div class="container">
+        <div class="movie-list"> 
+    <h2 class="movie-lst__header">Выберите фильм</h2>
+    <table style= "movie-list__table">
+        <thead>
+            <tr> <!-- строка--> 
+                <th> <!-- ячейка-->Time</th>
+                <th> Stuff that will happen</th>
+                <th> Заказать билет</th>
+            </tr>
+        </thead>    
+
+    <tbody>
+        <tr>
+            <td>10am - 12pm </td>
+            <td>Introduction and presentations about Envato</td>
+            <td>кнопка</td>
         </tr>
-    </thead>    
-    <tr>
-    <td> <!-- ячейка--> check</td>
-    <td> 10:00</td>
-    <td><a href="https://www.kinopoisk.ru/film/838/"> Человек-паук</a></td>
-    <td> фантастика, боевик, приключение </td>
-    <td> заказать билет</td>
-    </tr>
-    <tr>
-    <td> <!-- ячейка--> check</td>
-    <td> 12:00</td>
-    <td><a href="https://www.kinopoisk.ru/film/571896/"> Собачья жизнь</a></td>
-    <td> фэнтези, драма, комедия </td>
-    <td> заказать билет</td>
-    </tr>
-    <tr>
-    <td> <!-- ячейка--> check</td>
-    <td> 14:00</td>
-    <td><a href="https://www.kinopoisk.ru/film/482/"> История игрушек</a></td>
-    <td> мультфильм, фэнтези, комедия</td>
-    <td> заказать билет</td>
-    </tr>
-    <tr>
-        <td> <!-- ячейка--> check</td>
-        <td> 16:00</td>
-        <td><a href="https://www.kinopoisk.ru/film/693730/">Люди в черном: Интернэшнл </a></td>
-        <td>фантастика, боевик, комедия</td>
-        <td> заказать билет</td>
+        <tr>
+            <td>12pm - 02pm</td>
+            <td>Sessions by honorable guests and Speakers</td>
+            <td>кнопка</td>
         </tr>
-</table>
+        <tr>
+            <td>02pm - 03pm</td>
+            <td>Break and Mingle time with the authors</td>
+            <td>кнопка</td>
+        </tr>
+        <tr>
+            <td>03pm - 05pm</td>
+            <td>Portfolio Review, Rewards and Ending Presentation</td>
+            <td>кнопка</td>
+        </tr>
+        </tbody>
+    </table>
+        </div>
+    </div>
 </section>
 <!-- конец экрана с таблицей-->
 </main>
 
 <footer>
-
+<br>
+<br>
+<br>
 </footer>
 
 </body>
