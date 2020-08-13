@@ -6,130 +6,166 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link ref="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
+    
 </head>
 <body>
-
     <!-- первый экран-->
-<header>
-    
-        <div style="float: left; margin-right: 20px; background-color: cornflowerblue;">
-        <a href="http://university.innopolis.ru/" target ="_blank"> <img src="img/logo.png" alt= "cinema innopolis university" > 
-            <!-- target ="_blank" открывает гиперссылку в новом окне-->
-        </div>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">ЗАКАЗАТЬ БИЛЕТ</a>
-                </li>
-                <li>
-                    <a href="#">ПРЕИМУЩЕСТВА </href>
-                </li>
-                <li>    
-                    <a href="#">ФИЛЬМЫ</a>
-                </li>
-                <li>
-                    <a href="#">КОНТАКТЫ</a>
-                </li>
-            </ul> 
-        </nav>
-
-        <div style="float: left; margin-right: 20px;">
-         Ваш город:<span> <strong>Москва</strong></span>    
-        </div>
-</header>
-<main>
-<br>
-    <section>
-        <h2>Закажите билет в кино</h2>
-        <p><h2>Всем покупателям <span> подарок!</span></h2></p> 
-    </section> 
-  
-<!-- конец первого экрана-->
-    
-<!-- второй экран--> 
-  
-    <section> 
-        <h2> Добро пожаловать!</h2>
-
-        <p>Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus. </p>
-        <p>Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus. </p>
-    </section>
-
-<section>
-    <div>
-       <h3>Почему мы?</h3>     
+<div class="block01">
+    <div class="conteiner">
+        <header class="block01__header">
+            <div class="block01__row">
+                <div class="block01__col1"> 
+                    <a href="http://university.innopolis.ru/" target ="_blank"></a> <!-- target ="_blank" открывает гиперссылку в новом окне-->
+                    <img src="img/logo.png" alt="cinema innopolis university">        
+                </div>
+                <div class="block01__col2">
+                    <nav class="block01__nav text-right">
+                        <ul>
+                            <li><a href="#">ЗАКАЗАТЬ БИЛЕТ</a></li>
+                            <li><a href="#">ПРЕИМУЩЕСТВА </a></li>
+                            <li><a href="#">ФИЛЬМЫ</a></li>
+                            <li><a href="#">КОНТАКТЫ</a></li>
+                        </ul> 
+                    </nav>    
+                </div>
+            </div>
+            <div style="float: right; margin-right: 20px; color:white">
+         Ваш город:<span><strong>Москва</strong></span>    
+            </div>  
+        </header>     
+        <div class="block01_h1__main">
+            <h1 class="block01_h1 text-center">Закажите билет в кино</h1>
+            <h2 class="block01_h2 text-center">Всем покупателям подарок!</h2>
+        </div> 
     </div>
-   <div>
-       <img src="img/b2_icon_1.jpg" alt="icon_1">
-
-        <div>
-            <h4><i>Большие экраны </i> </h4>
-            <p> ipsum dolor sit amet, consectetur adipisicing elit. At autem cum dolores dolorum eius error expedita illum itaque molestiae mollitia nemo, nostrum officia quas ratione tempora temporibus veritatis vero voluptates.</p> 
+</div> 
+<!-- конец первого экрана-->   
+<!-- второй экран--> 
+<section> 
+        <!-- <div class="block02">
+            <div class="container">
+                    <div class="block02__inner">
+                    <div class="block02__info">
+                    <p class="block02_text1"> Добро пожаловать!</p>
+                    <p class="simple-text block02__text2">Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus. </p>
+                    <p class="simple-text block02__text2">Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis reprehenderit, saepe! Debitis enim optio saepe voluptatibus. </p>
+               </div>
+            </div>
+        </div> -->
+</section>
+<!-- третий экран-->
+<section>
+    <p class="font-size-50 font-weight-700">
+       Почему мы?     
+    </p>
+   <div class="block02__pluses text-center">
+       <div class="block02__plus">
+            <div class="block02__image-wrap">
+                <img src="img/b2_icon_1.jpg" alt="icon_1">
+            </div>
+            <p class="block02_text3">
+               Большие экраны 
+            </p>
+            <p class="simple-text"> 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem cum dolores dolorum eius error expedita illum itaque molestiae mollitia nemo, nostrum officia quas ratione tempora temporibus veritatis vero voluptates.
+            </p> 
         </div>
-        <img src="img/b2_icon_2.jpg" alt="icon_2">
-        <div>
-            <h4>Объемный звук </h4>
-           <p>Lorem ipsum dolor sit amet. </p>   
+        <div class="block02__plus">
+            <div class="block02__image-wrap">
+                <img src="img/b2_icon_2.jpg" alt="icon_2">     
+            </div>
+            <p class="block02_text3">
+                Объемный звук
+             </p>
+             <p class="simple-text"> 
+                Lorem ipsum dolor sit amet.
+             </p>
         </div>
-        <img src="img/b2_icon_3.jpg" alt="icon_3">
-        <div>
-            <h4> Удобные кресла </h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem cum dolores dolorum eius error expedita illum itaque molestiae mollitia nemo, nostrum officia quas ratione tempora temporibus veritatis vero voluptates.</p>
+        <div class="block02__plus">
+            <div class="block02__image-wrap">
+                <img src="img/b2_icon_3.jpg" alt="icon_3">     
+            </div>
+            <p class="block02_text3">
+                Удобные кресла
+             </p>
+             <p class="simple-text"> 
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem cum dolores dolorum eius error expedita illum itaque molestiae mollitia nemo, nostrum officia quas ratione tempora temporibus veritatis vero voluptates.
+             </p>
         </div>
-   </div> 
+   </div>
+   <div class="clear"></div>  
 </section> 
 <!-- конец второго экрана-->
-
 <!-- начало экрана с таблицей-->
 <section>
+    <div class="block03">
+
     <div class="container">
         <div class="movie-list"> 
-    <h2 class="movie-lst__header">Выберите фильм</h2>
-    <table style= "movie-list__table">
-        <thead>
-            <tr> <!-- строка--> 
-                <th> <!-- ячейка-->Time</th>
-                <th> Stuff that will happen</th>
-                <th> Заказать билет</th>
-            </tr>
-        </thead>    
-
+        <h2 class="font-size-50 font-weight-700 text-center">Выберите фильм</h2>
+            <table class="block03__table">
+            <thead>
+                <tr> <!-- строка-->
+                    <th></th> 
+                    <th><a href="#"> <!-- ячейка-->Time<i class="icon icon-up"></i></a></th>
+                    <th> Stuff that will happen</th>
+                    <th> Заказать билет</th>
+                </tr>
+            </thead>    
     <tbody>
-        <tr>
-            <td>10am - 12pm </td>
-            <td>Introduction and presentations about Envato</td>
-            <td>кнопка</td>
-        </tr>
-        <tr>
-            <td>12pm - 02pm</td>
-            <td>Sessions by honorable guests and Speakers</td>
-            <td>кнопка</td>
-        </tr>
-        <tr>
-            <td>02pm - 03pm</td>
-            <td>Break and Mingle time with the authors</td>
-            <td>кнопка</td>
-        </tr>
-        <tr>
-            <td>03pm - 05pm</td>
-            <td>Portfolio Review, Rewards and Ending Presentation</td>
-            <td>кнопка</td>
-        </tr>
-        </tbody>
-    </table>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="block03__checkbox" id="block03__checkbox">
+                    </td>
+                    <td>10am - 12pm </td>
+                    <td>Introduction and presentations about Envato</td>
+                    <td>кнопка</td>
+                </tr>
+                <tr>
+                    <td>12pm - 02pm</td>
+                    <td>Sessions by honorable guests and Speakers</td>
+                    <td>кнопка</td>
+                </tr>
+                <tr>
+                    <td>02pm - 03pm</td>
+                    <td>Break and Mingle time with the authors</td>
+                    <td>кнопка</td>
+                </tr>
+                <tr>
+                    <td>03pm - 05pm</td>
+                    <td>Portfolio Review, Rewards and Ending Presentation</td>
+                    <td>кнопка</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 </section>
+<main>
+<br>
 <!-- конец экрана с таблицей-->
+<!-- начало секции с подарком-->
+<section>
+    <img src="img/layer4.png" alt="img_4">
+    <div>
+        <h3>Подарок каждому!</h3>     
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam!</p>
+        <p> ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam!</p>
+        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit veniam!</P>
+    </div>
+    <div>
+        <p style="text-align: center"><button>Получить подарок</button>
+    </div> 
+</section>
 </main>
 
-<footer>
-<br>
-<br>
-<br>
-</footer>
+    <footer>
+        <br>
+        <br>
+        <br>
+    </footer>
 
 </body>
 </html>
