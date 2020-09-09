@@ -8,8 +8,21 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="js/plugins/owl.carousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="js/plugins/owl.carousel/css/owl.theme.default.min.css">
+    <style>
+        .owl-nav button.owl-prev{
+            position: absolute;
+            left: -30px;
+            top: 41%;
+        }
+        .owl-nav button.owl-next{
+            position: absolute;
+            right: -30px;
+            top: 41%;
+        }
+    </style>
 </head>
 
 <body>    <!-- первый экран-->
@@ -179,9 +192,9 @@
             <p class="simple-text block05__text1">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum, laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!
             </p>
-            <table class="block05__inner">
-                <tr>
-                    <td class="block05__movie1">
+            <div class="block05__inner">
+                
+                    <div class="block05__movie1">
                         <div class="block05__relative">
                             <div class="block05__bg">
                                 <img src="/img/spiderman.png" alt="">
@@ -200,14 +213,14 @@
                             </div>
                            </div>
                         </div>
-                    </td>
-                    <td class="block05__movie1">
+                    </div>
+                    <div class="block05__movie1">
                         <div class="block05__relative">
                             <div class="block05__bg">
                                 <img src="/img/mov2.png" alt="">
                             </div>
                             <div class="block05__descr">
-                                <div class="block05__text2">Человек-паук</div>
+                                <div class="block05__text2">Фильм 2</div>
                                 <div class=block05__sep></div>
                                 <div class="block05__text3">Lorem ipsum dolor sit amet, consectetur</div>
                                 <div class="block05__linls">
@@ -220,14 +233,14 @@
                             </div>
                             </div>
                         </div>
-                    </td>
-                    <td class="block05__movie1">
+                    </div>
+                    <div class="block05__movie1">
                         <div class="block05__relative">
                             <div class="block05__bg">
                                 <img src="/img/mov3.png" alt="">
                             </div>
                             <div class="block05__descr">
-                                <div class="block05__text2">Человек-паук</div>
+                                <div class="block05__text2">Фильм 3</div>
                                 <div class=block05__sep></div>
                                 <div class="block05__text3">Lorem ipsum dolor sit amet, consectetur</div>
                                 <div class="block05__linls">
@@ -240,9 +253,8 @@
                                 </div>
                             </div>
                         </div>
-                    </td>
-                </tr>
-            </table>
+                    </div>
+            </div>
         </div>
     </div>
 </section>
@@ -385,7 +397,7 @@
         <form action="" id="form">
             <div class="modal__form">
                 <div class="input-wrap">
-                    <input type="text" placeholder="Имя*" id="name" name="" class="input-text">
+                    <input type="text" placeholder="Имя*" id="name" name="name" class="input-text">
                 </div>
                 <div class="input-wrap">
                     <select name="" id="select" class="input-text input-select">
@@ -408,7 +420,7 @@
                     <textarea placeholder="Комментарий" name="" class="input-text input-textarea"></textarea>
                 </div>
                 <div class="input-wrap">
-                    <input type="checkbox" id="checkbox1" placeholder="Имя*" required name="" class="input-checkbox">
+                    <input type="checkbox" id="checkbox1" placeholder="Имя*" required name="checkbox1" class="input-checkbox">
                     <label for="checkbox1"><i class="icon icon-check" title="check"></i> Я согласен на обработку персональных данных</label>
                 </div>
                 <div class="input-wrap">
@@ -433,4 +445,5 @@
         <script src="js/jquerry.js"></script>
         <script src="js/plugins/owl.carousel/js/owl.carousel.min.js"></script>
         <script src="js/custom.js"></script>
+        <!-- <script src="js/films.js"></script> -->
 </html>
