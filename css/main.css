@@ -3,7 +3,16 @@
 }
 body {font-family: 'Roboto', sans-serif;
     margin: 0 auto;
+    min-width: 16rem;
+    max-width: 96rem;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
 }
+
+html {
+    font-size: 1.46vw;
+}
+
 
 @font-face {
     font-family: 'Roboto';
@@ -30,10 +39,6 @@ body {font-family: 'Roboto', sans-serif;
     font-family: 'Roboto';
     src:url('../fonts/Roboto-Medium.ttf') format('truetype');
     font-weight: 500;
-}
-
-html{
-    font-size: 20px;
 }
 
 img {
@@ -114,8 +119,8 @@ p {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: "Roboto-Thin";
-    padding: 1.1rem 0 0;
+    font-family: "Roboto-Thin";
+    padding: 12px 0 0;
 }
 
 .block01__nav a:hover{
@@ -322,7 +327,7 @@ input[type="checkbox"] + span {
     top: 0;
     width: 100%; 
     height: 100%;
-    background: url(/img/More_icon.png) no-repeat; /* Фоновый рисунок */
+    background: url(../img/minus.svg) no-repeat; /* Фоновый рисунок */
     cursor: pointer; /* Курсор в виде руки */
    }
    
@@ -331,15 +336,10 @@ input[type="checkbox"] + span {
     }
     
     input[type="checkbox"]:checked + span {
-        position: absolute; /* Абсолютное позиционирование */ 
-        top: 0;
-        width: 100%; 
-        height: 100%;
-        background: url(../img/More_icon.png) no-repeat; /* Фоновый рисунок */
-        background-color: green;
-        cursor: pointer; /* Курсор в виде руки */
-        border-radius: 20px; 
+        background: url(../img/add.svg) no-repeat; /* Фоновый рисунок */
+        cursor: pointer; 
     }
+
 
    .block04 {
        padding: 260px 0 160px;
@@ -382,18 +382,20 @@ input[type="checkbox"] + span {
        margin: 0 0 20px;
     }
 
-    .button_1{
+    .button_1 a{
         display: inline-block;
         background: #90d23d;
         color: #ffffff;
-        padding: 15px 30px;
-        border-radius: 12px;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.6rem;
         font-size: 0.9rem;
         transition: 0.2s;
-        border: 20px solid #90d23d;
+        border: 0.1rem solid #90d23d;
         cursor: pointer;
         text-decoration: none;
     }
+
+
 
     .block05 {
         padding: 120px 0;
@@ -575,4 +577,81 @@ input[type="checkbox"] + span {
         transition: 0.2s;
         border: 0.1rem solid #90d23d;
         cursor: pointer;
+    }    
+    
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .7);
     }
+
+    .hidden {
+        display: none;
+    }
+    
+    .close {
+        color: #000;
+        display: block;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+    }
+    
+    .order-form {
+        background: rgba(255, 255, 255);
+        border-radius: 14px;
+        box-shadow: 1px 0px 5px rgb(125, 125, 125);
+        width: 320px;
+        height: 300px;
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+    
+    .popup-error-message {
+        color: #cc0033;
+        font-size: .9vw;
+        line-height: 28px;
+    }
+    
+    .popup-error-message {
+        display: none;
+    }
+    
+    .error input {
+        background-color: #fce4e4;
+        border: 1px solid #cc0033;
+        outline: none;
+    }
+    
+    .error .popup-error-message {
+        display: block;
+    }
+    
+    .popup_input {
+        font-size: .95rem;
+        color: #6c6c6c;
+        padding: 0.75rem 0.55rem;
+        border: 1px solid #bebebe;
+        border-radius: 0.25rem;
+        width: 100%;
+        transition: 0.2s;
+    }
+    
+    .popup__input_wrap {
+        margin: 0 3rem 1rem 0;
+    }
+    
+    .popup_input_text {
+        font-size: .7rem;
+    }
+    
