@@ -52,7 +52,7 @@ p {
     margin-inline-start: 0px
 }
 .conteiner {
-    max-width: 1060px;
+    max-width: 52rem;
     margin:  0 auto;
     padding: 0 0.75rem;
 }
@@ -115,12 +115,12 @@ p {
 }
 
 .block01__city {
-    font-size: 15px;
+    font-size: .75rem;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Roboto-Thin";
-    padding: 12px 0 0;
+    padding: .6rem 0 0;
 }
 
 .block01__nav a:hover{
@@ -205,7 +205,7 @@ color:green;
 
 .block02__text3 {
     margin: 0 0 0.75rem;
-    font-size: 37px;
+    font-size: 1.85rem;
     font-family: "Roboto";
     color: rgb(37, 37, 37);
     font-weight: bold;
@@ -250,10 +250,10 @@ max-height: 100%;
 
 .movie-list__header {
     color: #252525;
-    font-size: 50px;
+    font-size: 2.5rem;
     text-align: center;
     font-weight: 800;
-    margin: 90px;
+    margin: 4.5rem;
 }
 
 .block03 {
@@ -277,19 +277,19 @@ max-height: 100%;
     font-size: 1.5rem;
     font-weight: 700;
     height: 3.25rem;
-    padding: 36px 20px;
+    padding: 1.8rem 1rem;
 }
 
 .block03__table th a{
     font-weight: 700;
-    font-size: 22px;
+    font-size: 1.1rem;
     color: #ffffff;
     text-decoration: none;
 }
 .block03__table tr {
     color: #ffffff;
     background: #373737;
-    font-size: 22px;
+    font-size: 1.1rem;
     width: 700px;
     height: 65px;
 }
@@ -342,7 +342,7 @@ input[type="checkbox"] + span {
 
 
    .block04 {
-       padding: 260px 0 160px;
+       padding: 13rem 0 8rem;
        background: url(../img/background_2.png) no-repeat center / cover;
        position: relative;
        overflow: hidden;
@@ -358,7 +358,7 @@ input[type="checkbox"] + span {
        border-radius: 100%;
        overflow: hidden;
        left: 0;
-       top: -260px;
+       top: -13rem;
    }
 
    .block04__text-wrap {
@@ -372,14 +372,14 @@ input[type="checkbox"] + span {
 
    h3 {
        color: #ffffff;
-       margin: 0 0 40px;
-       font-size: 50px;
+       margin: 0 0 2rem;
+       font-size: 2.5rem;
        font-weight: 900;
    }
 
    .block04__text1 {
        color: #ffffff;
-       margin: 0 0 20px;
+       margin: 0 0 1rem;
     }
 
     .button_1 a{
@@ -398,11 +398,11 @@ input[type="checkbox"] + span {
 
 
     .block05 {
-        padding: 120px 0;
+        padding: 6rem 0;
     }
 
     .block05__header {
-        margin: 0 0 30px;
+        margin: 0 0 1.5rem;
     }
     .block05__text1{
         margin: 0 0 3rem;
@@ -422,7 +422,7 @@ input[type="checkbox"] + span {
     }
 
     .block05__movie1 {
-        padding: 23px;
+        padding: 1.15rem;
     }
 
     .block05__descr {
@@ -430,7 +430,7 @@ input[type="checkbox"] + span {
         background-color: rgb(144, 210, 61, .5);
         left: 0;
         right: 0;
-        top: 272px;
+        top: 13.6rem;
         bottom: 0;
         padding: 24px;
         transition: 0.5s;

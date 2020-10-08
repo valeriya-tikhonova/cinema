@@ -46,6 +46,7 @@ const genres = [
     'Мультфильм'  // 5
   ]
 
+
 const films = [
     {
         start: '10am',
@@ -67,40 +68,65 @@ const films = [
         start: '03pm',
         staff: 'Люди в черном: Интернэшнл', 
         genre: [0, 1, 5],
-    }
+    },
 ]
 
 // console.log(films)
 
-const film_start_1 = document.getElementById ('film_start_1');
-const film_staff_1 = document.getElementById ('film_staff_1');
-const film_genre_1 = document.getElementById ('film_genre_1');
+// const film_start_1 = document.getElementById ('film_start_1');
+// const film_staff_1 = document.getElementById ('film_staff_1');
+// const film_genre_1 = document.getElementById ('film_genre_1');
 
-film_start_1.innerHTML = films[0].start;
-film_staff_1.innerHTML = films[0].staff;
-film_genre_1.innerHTML = films[0].genre;
+const tableFilms = document.querySelector('.block03__table').childNodes[1];
 
-const film_start_2 = document.getElementById ('film_start_2');
-const film_staff_2 = document.getElementById ('film_staff_2');
-const film_genre_2 = document.getElementById ('film_genre_2');
+for (let i=0; i< films.length; i++){
+    const tr = document.createElement('tr');
+    const tdStart = document.createElement('td');
+    tdStart.innerHTML = films[i].start;
+    const tdStaff = document.createElement('td');
+    tdStaff.innerHTML = films[i].staff;
+    let currentGenreFilm = [];
+    for (let i=0; i < films[i].genre.length; i++){
+        currentGenreFilm.push(' ' + genres[i]);
+    }
+    currentGenreFilm = currentGenreFilm.toString()
+    const tdGenre = document.createElement('td');
+    tdGenre.innerHTML = currentGenreFilm;
 
-film_start_2.innerHTML = films[1].start;
-film_staff_2.innerHTML = films[1].staff;
-film_genre_2.innerHTML = films[1].genre;
+    const tdButton = document.createElement('td') 
+    tdButton.innerHTML = '<label><input type="checkbox" class="clock03__checkbox1"><span></span></label>'
 
-const film_start_3 = document.getElementById ('film_start_3');
-const film_staff_3 = document.getElementById ('film_staff_3');
-const film_genre_3 = document.getElementById ('film_genre_3');
+    tr.appendChild(tdStart);
+    tr.appendChild(tdStaff);
+    tr.appendChild(tdGenre);
+    tr.appendChild(tdButton);
+    tableFilms.appendChild(tr);
+}
 
-film_start_3.innerHTML = films[2].start;
-film_staff_3.innerHTML = films[2].staff;
-film_genre_3.innerHTML = films[2].genre;
+// film_start_1.innerHTML = films[0].start;
+// film_staff_1.innerHTML = films[0].staff;
 
-const film_start_4 = document.getElementById ('film_start_4');
-const film_staff_4 = document.getElementById ('film_staff_4');
-const film_genre_4 = document.getElementById ('film_genre_4');
 
-film_start_4.innerHTML = films[3].start;
-film_staff_4.innerHTML = films[3].staff;
-film_genre_4.innerHTML = films[3].genre;
-// console.log (film_start_1)
+// const film_start_2 = document.getElementById ('film_start_2');
+// const film_staff_2 = document.getElementById ('film_staff_2');
+// const film_genre_2 = document.getElementById ('film_genre_2');
+
+// film_start_2.innerHTML = films[1].start;
+// film_staff_2.innerHTML = films[1].staff;
+// film_genre_2.innerHTML = films[1].genre;
+
+// const film_start_3 = document.getElementById ('film_start_3');
+// const film_staff_3 = document.getElementById ('film_staff_3');
+// const film_genre_3 = document.getElementById ('film_genre_3');
+
+// film_start_3.innerHTML = films[2].start;
+// film_staff_3.innerHTML = films[2].staff;
+// film_genre_3.innerHTML = films[2].genre;
+
+// const film_start_4 = document.getElementById ('film_start_4');
+// const film_staff_4 = document.getElementById ('film_staff_4');
+// const film_genre_4 = document.getElementById ('film_genre_4');
+
+// film_start_4.innerHTML = films[3].start;
+// film_staff_4.innerHTML = films[3].staff;
+// film_genre_4.innerHTML = films[3].genre;
