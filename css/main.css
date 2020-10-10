@@ -52,13 +52,13 @@ p {
     margin-inline-start: 0px
 }
 .conteiner {
-    max-width: 52rem;
-    margin:  0 auto;
-    padding: 0 0.75rem;
+    max-width: 53rem;
+    padding: 0 0.9375rem;
+    margin: 0 auto;
 }
 .block01{
     background: url("../img/top_bg.jpg") no-repeat top center / cover;
-    min-height: 100vh;
+    min-height: 120vh;
     position: relative;
     overflow: hidden;
 }
@@ -73,7 +73,7 @@ p {
 }
 
 .block01__row div{
-    padding: 0.75rem;
+    padding: 0 0 0.75rem;
     float: left;
     min-height: 1px;
 }
@@ -98,6 +98,7 @@ p {
     padding:1.1rem 0 0;
     text-align: right;
 }
+
 .block01__nav li {
     display: inline-block;
     color: white;
@@ -115,12 +116,12 @@ p {
 }
 
 .block01__city {
-    font-size: .75rem;
+    font-size: 0.75rem;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Roboto-Thin";
-    padding: .6rem 0 0;
+    padding: 0.6rem 0 0;
 }
 
 .block01__nav a:hover{
@@ -168,12 +169,13 @@ color:green;
 
 .block02__info {
     position: absolute;
-    top: -10rem;
+    right: -0.1rem;
+    top: -10.4rem;
     width: 50%;
-    padding: 1.5rem;
+    padding: 1.7rem 1.6rem;
     background: #fff;
     box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
-    right: 0;   
+    z-index: 2;
 }
 
 .block02__text1{
@@ -226,6 +228,7 @@ color:green;
 .block02__plusses{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .block02__plus {
@@ -233,8 +236,12 @@ color:green;
 }
 
 .block02__image-wrap{
-    height: 10,5rem;
-    position: relative;
+    margin-bottom: 2rem;
+    height: 10.55rem;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .block02__image-wrap img{
@@ -244,7 +251,7 @@ max-height: 100%;
 
 .block02__text3{
     margin: 0 0 1rem;
-    font-size: 35px;
+    font-size: 1.5rem;
     font-weight: 900;
 }
 
@@ -290,8 +297,8 @@ max-height: 100%;
     color: #ffffff;
     background: #373737;
     font-size: 1.1rem;
-    width: 700px;
-    height: 65px;
+    width: 35rem;
+    height: 3.25rem;
 }
 
 .block03__table tr:nth-child(even) {
@@ -305,19 +312,19 @@ max-height: 100%;
 }
 
 .block03__table td {
-    font-size: 22px;
+    font-size: 1.1rem;
     font-family: "Roboto";
     padding: 36px 20px;
 }
 
 .block03__text {
-    margin: 30px auto 0;
-    max-width: 830px;
+    margin: 1.5rem auto 0;
+    max-width: 41.5rem;
 }
 
 label {
-    width: 35px; /* Ширина рисунка */
-    height: 35px; /* Высота рисунка */
+    width: 1.75rem; /* Ширина рисунка */
+    height: 1.75rem; /* Высота рисунка */
     position: absolute;
    
    }
@@ -342,24 +349,35 @@ input[type="checkbox"] + span {
 
 
    .block04 {
-       padding: 13rem 0 8rem;
+        padding: 6.93rem 0 8.7rem;
        background: url(../img/background_2.png) no-repeat center / cover;
        position: relative;
        overflow: hidden;
    }
 
    .block04__inner {
-       position: relative;
+        text-align: right;
+        color: #fff;
+        margin-left: auto;
+        margin-bottom: 1.9rem;
    }
 
    .block04__logo {
-       position: absolute;
-       box-shadow:10.5px 18.187px 12px 0px rgba(35, 31, 32, 0.55);
-       border-radius: 100%;
-       overflow: hidden;
-       left: 0;
-       top: -13rem;
+        position: absolute;
+        overflow: hidden;
+        border-radius: 100%;
+        left: 0;
+        top: -3.4rem;
+        left: 8.5rem;
+        z-index: 1;
+        box-shadow: 0.5rem 0.5rem 0.5rem #000;
    }
+
+   .block04__logo img {
+    display: block;
+    width: 16.5rem;
+    height: 16.5rem;
+}
 
    .block04__text-wrap {
         width: 75%;
@@ -430,7 +448,7 @@ input[type="checkbox"] + span {
         background-color: rgb(144, 210, 61, .5);
         left: 0;
         right: 0;
-        top: 13.6rem;
+        top: 14.6rem;
         bottom: 0;
         padding: 24px;
         transition: 0.5s;
@@ -470,14 +488,14 @@ input[type="checkbox"] + span {
         position: absolute;
         color: #ffffff;
         font-size: 1.75rem;
-        bottom: 24px;
-        left: 24px;   
+        bottom: 1.2rem;
+        left: 1.2rem;   
     }
 
     .block05__links a {
         display: inline-block;
-        width: 30px;
-        height: 30px;
+        width: 1.5rem;
+        height: 1.5rem;
         border-radius: 100%;
         background: #fff;
         color: rgb(144, 210, 61, .5);
