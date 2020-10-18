@@ -13,6 +13,12 @@
     }
 }
 
+@media screen and (max-width: 1000px){
+    html {
+    font-size: 17px;
+}
+}
+
 @media screen and (max-width:850px)
 {
     html{
@@ -22,6 +28,28 @@
     .block01__city{
         display: none;
     }
+ 
+        /* бургер */
+        /* .menu {
+            display: none;
+          }
+        .trigger {
+          display: inline-block;
+          margin: 3px;
+          cursor: pointer;
+          position: absolute;
+        }
+        .trigger i {
+          display: block;
+          width: 30px;
+          height: 3px;
+          margin: 10px auto;
+          background: rgb(255, 255, 255);
+        }
+        .show {
+            display: block;
+        } */
+
 
     .menu__burger{
         position: relative;
@@ -83,7 +111,7 @@
     .block01__nav_closed{
         transform: translateX(-100%);
     }
-    
+   
     .block01__col2 {
         width: auto;
     }
@@ -139,13 +167,7 @@
     }  
 
     .block04__logo {
-        left: 0.5rem;
-        top: 1.6rem;
-    }
-
-    .block04__logo img {
-        width: 9.5rem;
-        height: 9.5rem;
+        top: -16rem;
     }
 
     .block04__text-wrap {
@@ -199,7 +221,15 @@
         position: absolute;
         right: -1.2rem;
         top: 2rem;
+    } 
+    .table-list {
+        width: 100%;
+        overflow-x: auto;
     }
+    .block03__table{
+        min-width: 50rem;
+    }
+    
 }
 
 @media screen and (max-width: 500px)
@@ -256,5 +286,8 @@
     
     .clear{
         clear: both;
+    }
+    .block04__logo {
+        top: -16rem;
     }
 }

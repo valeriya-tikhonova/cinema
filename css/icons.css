@@ -11,7 +11,7 @@
 	}
 
 .icon {
-	display: block;
+	display: inline-block;
 	}
 	.icon:before {
 		font-family: fico;

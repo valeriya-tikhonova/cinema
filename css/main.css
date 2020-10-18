@@ -13,7 +13,6 @@ html {
     font-size: 1.46vw;
 }
 
-
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
@@ -70,24 +69,24 @@ p {
 .block01__row {
     overflow: hidden;
     margin: 0 -0.75rem;
+    display: flex;
+    align-items: center;
 }
 
 .block01__row div{
-    padding: 0 0 0.75rem;
-    float: left;
+    padding: 0 0.75rem;
     min-height: 1px;
 }
-
 .block01__col1 {
     width: 25%;
 }
 
 .block01__col2{
-    width: 55%;
+    padding: 0 0.75rem;
+    min-height: 1px;
 }
 
 .block01__col3{
-    width: 20%;
 }
 
 .block01__col1 img{
@@ -116,12 +115,12 @@ p {
 }
 
 .block01__city {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Roboto-Thin";
-    padding: 0.6rem 0 0;
+    padding: 1.3rem 0 0;
 }
 
 .block01__nav a:hover{
@@ -226,9 +225,9 @@ color:green;
 }
 
 .block02__plusses{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    
 }
 
 .block02__plus {
@@ -247,6 +246,7 @@ color:green;
 .block02__image-wrap img{
 max-width: 100%;
 max-height: 100%;
+height: 100%;
 }
 
 .block02__text3{
@@ -264,7 +264,7 @@ max-height: 100%;
 }
 
 .block03 {
-    padding: 4.5rem;
+    padding: 4.5rem 0 3rem;
 }
 
 .block03__header{
@@ -272,19 +272,15 @@ max-height: 100%;
 }
 
 .block03__table{
-    width: 100%;
+    border-radius: 0.75rem;
     border-collapse: collapse;
-    border-radius: 15px;
     overflow: hidden;
+    width: 100%;
 }
 
 .block03__table th {
-    color: #ffffff;
+    padding: 0.75rem;
     background: #a3cc40;
-    font-size: 1.5rem;
-    font-weight: 700;
-    height: 3.25rem;
-    padding: 1.8rem 1rem;
 }
 
 .block03__table th a{
@@ -293,12 +289,10 @@ max-height: 100%;
     color: #ffffff;
     text-decoration: none;
 }
-.block03__table tr {
-    color: #ffffff;
-    background: #373737;
-    font-size: 1.1rem;
-    width: 35rem;
-    height: 3.25rem;
+
+.block03__table th i {
+    font-size: 0.75rem;
+    display: inline-block;
 }
 
 .block03__table tr:nth-child(even) {
@@ -312,24 +306,26 @@ max-height: 100%;
 }
 
 .block03__table td {
-    font-size: 1.1rem;
     font-family: "Roboto";
-    padding: 36px 20px;
+    padding: 0.9rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
-.block03__text {
+    .block03__text {
     margin: 1.5rem auto 0;
     max-width: 41.5rem;
 }
 
 label {
-    width: 1.75rem; /* Ширина рисунка */
-    height: 1.75rem; /* Высота рисунка */
+    width: 1rem; 
+    height: 1rem; 
     position: absolute;
    
    }
 
-input[type="checkbox"] + span {
+   .block03__table input[type="checkbox"] + span {
     position: absolute; /* Абсолютное позиционирование */ 
     top: 0;
     width: 100%; 
@@ -338,45 +334,49 @@ input[type="checkbox"] + span {
     cursor: pointer; /* Курсор в виде руки */
    }
    
-   input[type="checkbox"] {
+   .block03__table input[type="checkbox"] {
         display: none;
     }
     
-    input[type="checkbox"]:checked + span {
+    .block03__table input[type="checkbox"]:checked + span {
         background: url(../img/add.svg) no-repeat; /* Фоновый рисунок */
         cursor: pointer; 
+        background-size: contain;
     }
 
+    .block04:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-right: 100vw solid transparent;
+        border-top: 5.55rem solid #fff;
+    }
 
    .block04 {
-        padding: 6.93rem 0 8.7rem;
-       background: url(../img/background_2.png) no-repeat center / cover;
-       position: relative;
-       overflow: hidden;
+        padding: 13rem 0 8rem;
+        background: url(../img/background_2.png) no-repeat center / cover;
+        position: relative;
+        overflow: hidden;
    }
 
    .block04__inner {
-        text-align: right;
-        color: #fff;
-        margin-left: auto;
-        margin-bottom: 1.9rem;
+    position: relative;
    }
 
    .block04__logo {
         position: absolute;
-        overflow: hidden;
-        border-radius: 100%;
-        left: 0;
-        top: -3.4rem;
-        left: 8.5rem;
-        z-index: 1;
         box-shadow: 0.5rem 0.5rem 0.5rem #000;
+        border-radius: 100%;
+        overflow: hidden;
+        left: 0;
+        top: -13rem;
    }
 
    .block04__logo img {
     display: block;
-    width: 16.5rem;
-    height: 16.5rem;
+    width: 15rem;
+    height: 15rem;
 }
 
    .block04__text-wrap {
@@ -413,7 +413,14 @@ input[type="checkbox"] + span {
         text-decoration: none;
     }
 
-
+    .block04:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-left: 100vw solid transparent;
+        border-bottom: 5.55rem solid #fff;
+    }
 
     .block05 {
         padding: 6rem 0;
@@ -444,8 +451,14 @@ input[type="checkbox"] + span {
     }
 
     .block05__descr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .block05__descr {
         position: absolute;
-        background-color: rgb(144, 210, 61, .5);
+        background-color: #46c90b;
+        opacity: 0.8;
         left: 0;
         right: 0;
         top: 14.6rem;
@@ -472,19 +485,21 @@ input[type="checkbox"] + span {
     }
 
     .block05__sep{
-        width: 4.2rem;
-        height: 0.3rem;
+        display: block;
+        width: 2.5rem;
+        height: 0.25rem;
         background: #fff;
-        margin-bottom: 0.5rem;
+        margin: 0 0 1rem;
     }
 
     .block05__text3 {
         font-size: 0.9rem;
         color: #ffffff;
         font-weight: 400;
+        flex: 1;
     }
     
-    .block05__link {
+    .block05__links {
         position: absolute;
         color: #ffffff;
         font-size: 1.75rem;
@@ -492,15 +507,9 @@ input[type="checkbox"] + span {
         left: 1.2rem;   
     }
 
-    .block05__links a {
-        display: inline-block;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 100%;
-        background: #fff;
-        color: rgb(144, 210, 61, .5);
-        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
-        text-align: center;
+    .block05__linls a {
+        color: #ffffff;
+        font-size: 1.75rem;
     }
 
     .icon:before {
@@ -518,6 +527,10 @@ input[type="checkbox"] + span {
 
     .icon-facebook:before {
         content: "\f13a";
+    }
+
+    .icon-camera:before {
+        content: "\f10d";
     }
 
     .block05__movie1:hover .block05__descr {
@@ -584,18 +597,6 @@ input[type="checkbox"] + span {
         font-size: 1.5rem;
         color: #f0652a;
     }
-
-    .button1 {
-        display: inline-block;
-        background: #90d23d;
-        color: #ffffff;
-        padding: 0.75rem 1.5rem;
-        border-radius: 0.6rem;
-        font-size: 0.9rem;
-        transition: 0.2s;
-        border: 0.1rem solid #90d23d;
-        cursor: pointer;
-    }    
     
     .popup {
         position: fixed;
@@ -619,20 +620,13 @@ input[type="checkbox"] + span {
     }
     
     .order-form {
-        background: rgba(255, 255, 255);
-        border-radius: 14px;
-        box-shadow: 1px 0px 5px rgb(125, 125, 125);
-        width: 320px;
-        height: 300px;
-        text-align: center;
-        padding: 15px;
-        border-radius: 10px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
+    background: rgba(255, 255, 255);
+    border-radius: 14px;
+    box-shadow: 1px 0px 5px rgb(125, 125, 125);
+    width: 20rem;
+    padding: 1rem;
+    margin: 150px auto;
+    position: relative;
     }
     
     .popup-error-message {
@@ -672,4 +666,4 @@ input[type="checkbox"] + span {
     .popup_input_text {
         font-size: .7rem;
     }
-    
+  

@@ -40,8 +40,13 @@
                     </div>
                     <div class="block01__col2">
                         <div class="menu__wrap">
-                            <div class="menu__burger"> <span></span></div> 
-                            <nav class="block01__nav text-right block01__nav_closed">
+                            <div class="menu__burger"> <span id="trigger" class="trigger">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                              </span>
+                            </div> 
+                            <nav class="block01__nav text-right block01__nav_closed menu">
                             <ul>
                                 <li><a href="#">ЗАКАЗАТЬ БИЛЕТ</a></li>
                                 <li><a href="#">ПРЕИМУЩЕСТВА </a></li>
@@ -131,7 +136,8 @@
     <div class="conteiner">
         <div class="movie-list"> 
         <h2 class="header block03__header text-center">Выберите фильм</h2>
-            <table class="block03__table">
+        <div class="table-list">    
+        <table class="block03__table">
             <thead>
                 <tr> <!-- строка-->
                     <th><a href="#"> <!-- ячейка-->Начало сеанса <i class="icon icon-up"></i></a></th>
@@ -139,42 +145,17 @@
                     <th><a href="#">Жанр<i class="icon icon-up"></i></a></th>
                     <th><a href="#"> Заказать билет</a></th>
                 </tr>
-            </thead>    
-    <tbody>
-                <!-- <tr>
-                    <td id="film_start_1"></td>
-                    <td id="film_staff_1"></td>
-                    <td id="film_genre_1"></td>
-                    <td><label><input type="checkbox" class="clock03__checkbox1"><span></span></label> 
-                    </td>
-                </tr>
-                <tr>
-                    <td id="film_start_2"></td>
-                    <td id="film_staff_2"></td>
-                    <td id="film_genre_2"></td>
-                    <td><label><input type="checkbox" class="clock03__checkbox2"><span></span></label>
-                </tr>
-                <tr>
-                    <td id="film_start_3"></td>
-                    <td id="film_staff_3"></td>
-                    <td id="film_genre_3"></td>
-                    <td><label><input type="checkbox" class="clock03__checkbox3"><span></span></label>
-                </tr>
-                <tr>
-                    <td id="film_start_4"></td>
-                    <td id="film_staff_4"></td>
-                    <td id="film_genre_4"></td>
-                    <td><label><input type="checkbox" class="clock03__checkbox4"><span></span></label>
-                </tr> -->
-                </tbody>
-            </table>
+            </thead> 
+        </table>
         </div>
-    </div>
+        </div>
     <div>
         <p class="simple-text text-center block03__text">
             Please keep in mind that the timings may differ according to the flow of the event. The even is actually day long and we do plan to finish it within our set time but it doesn’t have to be, if we all agree to hangour for some time more, what harm could it do? :)
         </p>
     </div>
+</div>
+    
 </div>
 </section>
 
@@ -225,6 +206,9 @@
                                     <a href="#" target="_blank">
                                         <i class="icon icon-facebook" title="facebook"></i>
                                     </a>
+                                    <a href="#">
+                                        <i class="icon icon-camera" title="camera"></i>
+                                    </a>
                             </div>
                            </div>
                         </div>
@@ -235,7 +219,7 @@
                                 <img src="/img/mov2.png" alt="">
                             </div>
                             <div class="block05__descr">
-                                <div class="block05__text2">Фильм 2</div>
+                                <div class="block05__text2">Собачья жизнь 2</div>
                                 <div class=block05__sep></div>
                                 <div class="block05__text3">Lorem ipsum dolor sit amet, consectetur</div>
                                 <div class="block05__linls">
@@ -244,6 +228,9 @@
                                     </a>
                                     <a href="#" target="_blank">
                                         <i class="icon icon-facebook" title="facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="icon icon-camera" title="camera"></i>
                                     </a>
                             </div>
                             </div>
@@ -255,7 +242,7 @@
                                 <img src="/img/mov3.png" alt="">
                             </div>
                             <div class="block05__descr">
-                                <div class="block05__text2">Фильм 3</div>
+                                <div class="block05__text2">Люди в черном: Интернэшнл</div>
                                 <div class=block05__sep></div>
                                 <div class="block05__text3">Lorem ipsum dolor sit amet, consectetur</div>
                                 <div class="block05__linls">
@@ -264,6 +251,9 @@
                                     </a>
                                     <a href="#" target="_blank">
                                         <i class="icon icon-facebook" title="facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="icon icon-camera" title="camera"></i>
                                     </a>
                                 </div>
                             </div>
@@ -276,7 +266,7 @@
 
 <section>
     <div class="block06">
-<img src="https://via.placeholder.com/1920x450?text=Map-1920x450" alt>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af5dc6412339cafabbbab56d066151b81b6f1e4caba8364b1fbd7d9945825e9b7&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
     </div>
 </section>
 
@@ -426,16 +416,30 @@
                 </div>
 
                 <div class="popup__input_wrap">
-                    <p class="popup_input_text"><input type="checkbox" id="checkbox_1">Я согласен на обработку персональных данных</p>
+                    <p class="popup_input_text"><input type="checkbox" id="checkbox_1">  Я согласен на обработку персональных данных</p>
                 </div>
                 <div class="popup__input_wrap">
-                    <p><input type="submit" value="Отправить" id="submit"></p>
+                    <input type="submit" value="Отправить" id="submit" style="
+                            display: inline-block;
+                            background: #90d23d;
+                            color: #ffffff;
+                            padding: 0.75rem 1.5rem;
+                            border-radius: 0.6rem;
+                            font-size: 0.9rem;
+                            transition: 0.2s;
+                            border: 0.1rem solid #90d23d;
+                            cursor: pointer;
+                            text-decoration: none;
+                            margin-left: 150px;
+                            ">
                 </div>
             </div>
         </form>
     </div>
+   <!-- pop-up в таблице с фильмами  -->
+
 <!--формы -->
-    <div class="modal">
+    <!-- <div class="modal">
         <form action="" id="form">
             <div class="modal__form">
                 <div class="input-wrap">
@@ -482,7 +486,7 @@
                 </div>
             </div>
         </form>
-    </div>
+    </div> -->
 </body>
         <script src="js/jquerry.js"></script>
         <script src="js/plugins/owl.carousel/js/owl.carousel.min.js"></script>
