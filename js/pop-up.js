@@ -10,7 +10,7 @@ const closeFormButton = document.getElementById('form_close');
 const openFormButton = document.getElementById('form_open');
 const sendForm = document.getElementById('submit');
 
-const popup = document.getElementById('popup');
+const popup = document.getElementById('popup-table');
 closeFormButton.onclick = function(event) {
     event.preventDefault();
     popup.classList.add('hidden');

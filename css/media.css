@@ -99,7 +99,7 @@
         transition: .2s;
     }
     
-    .block01__nav li{
+    .block01__nav ul{
         display: block;
     }
 
