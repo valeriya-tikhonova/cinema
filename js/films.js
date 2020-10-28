@@ -178,9 +178,13 @@ const film = {
         return strGanars;
     },
 
+    getPrice: function () {
+            return this.price
+    },
+
     getRoom: function() {
         const room = this.room;
-        
+
         const name = rooms.find(
         
             function(el) {
@@ -254,11 +258,19 @@ const film = {
         return filmHTML;
     },
 
-    //добавлен
-    getPrice: function () {
-        return this.price
-    }
+    renderFilmPlaces(count){
+        cinemaTickets = document.getElementById('cinema-tickets');
+        for(let i= 0; i < count+1; i++){
+           let element = document.createElement('div');
+            element.classList.add('square');
+            element.innerHTML = 1;
+            cinemaTickets.append(element)
+        }
+    },
 };
+
+//Билеты на фильмы
+let ticket = [];
 
 //получаем DOM элемент с таблицей
 let tableDOM = document.getElementById("filmsHire");
@@ -271,6 +283,7 @@ for (let i = 0; i < filmsHire.length; i++) {
         filmRoom = film.getRoom.bind(currentFilm)(),
         filmRowHTML = film.renderFilmRow.bind(currentFilm)(),
         tr = document.createElement("tr"); //содаем DOM элемент TR;
+        film.renderFilmPlaces.bind(currentFilm)(filmRoom.count);
 
     tr.innerHTML = filmRowHTML; //записываем в DOM элемент HTML разметку
 
@@ -297,7 +310,6 @@ for (let i = 0; i < filmsHire.length; i++) {
 
         let orderFilmCountTicket = document.getElementById('orderFilmCountTicket'),
             orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice');
-            
     
         orderFilmTotalPrice.innerHTML = filmPrice * orderFilmCountTicket.value;
     

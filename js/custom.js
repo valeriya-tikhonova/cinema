@@ -37,84 +37,77 @@ $(document).ready(function(){
     })
 });
 
-const genres = [
-   'Фантастика', // 0
-    'Боевик',     // 1
-    'Фэнтези',    // 2
-    'Драма',      // 3
-    'Комедия',    // 4
-    'Мультфильм', // 5
-    'Приключения' // 6
-  ]
+// const genres = [
+//    'Фантастика', // 0
+//     'Боевик',     // 1
+//     'Фэнтези',    // 2
+//     'Драма',      // 3
+//     'Комедия',    // 4
+//     'Мультфильм', // 5
+//     'Приключения' // 6
+//   ]
 
 
-const films = [
-    {
-        start: '10:00',
-        name: 'Человек-паук',
-        genre: [0, 1, 2],
-        price: 200,
-    },
+// const films = [
+//     {
+//         start: '10:00',
+//         name: 'Человек-паук',
+//         genre: [0, 1, 2],
+//         price: 200,
+//     },
 
-    {
-        start: '12:00',
-        name: 'Собачья жизнь 2',
-        genre: [3, 4, 5],
-    },
-    {
-        start: '02:00',
-        name: 'История игрушек 4',
-        genre: [2, 3, 5],
-    },
-    {
-        start: '03:00',
-        name: 'Люди в черном: Интернэшнл', 
-        genre: [0, 1, 5],
-    },
-]
+//     {
+//         start: '12:00',
+//         name: 'Собачья жизнь 2',
+//         genre: [3, 4, 5],
+//     },
+//     {
+//         start: '02:00',
+//         name: 'История игрушек 4',
+//         genre: [2, 3, 5],
+//     },
+//     {
+//         start: '03:00',
+//         name: 'Люди в черном: Интернэшнл', 
+//         genre: [0, 1, 5],
+//     },
+// ]
 
 
-const tableFilms = document.querySelector('.block03__table').childNodes[1];
+// const tableFilms = document.querySelector('.block03__table').childNodes[1];
 
-for (let i=0; i< films.length; i++){
-    const tr = document.createElement('tr');
-    const tdStart = document.createElement('td');
-    tdStart.innerHTML = films[i].start;
-    const tdName = document.createElement('td');
-    tdName.innerHTML = films[i].name;
-    let currentGenreFilm = [];
-    for (let j=0; j < films[i].genre.length; j++){
-        currentGenreFilm.push(' ' + genres[films[i].genre[j]]);
-    }
+// for (let i=0; i< films.length; i++){
+//     const tr = document.createElement('tr');
+//     const tdStart = document.createElement('td');
+//     tdStart.innerHTML = films[i].start;
+//     const tdName = document.createElement('td');
+//     tdName.innerHTML = films[i].name;
+//     let currentGenreFilm = [];
+//     for (let j=0; j < films[i].genre.length; j++){
+//         currentGenreFilm.push(' ' + genres[films[i].genre[j]]);
+//     }
 
-    currentGenreFilm = currentGenreFilm.toString()
-    const tdGenre = document.createElement('td');
-    tdGenre.innerHTML = currentGenreFilm;
+//     currentGenreFilm = currentGenreFilm.toString()
+//     const tdGenre = document.createElement('td');
+//     tdGenre.innerHTML = currentGenreFilm;
     
 
-    const tdButton = document.createElement('td') 
-    tdButton.innerHTML = '<label><input type="checkbox" class="block03__checkbox1"><span></span></label>'
+//     const tdButton = document.createElement('td') 
+//     tdButton.innerHTML = '<label><input type="checkbox" class="block03__checkbox1"><span></span></label>'
 
-    tr.appendChild(tdStart);
-    tr.appendChild(tdName);
-    tr.appendChild(tdGenre);
-    tr.appendChild(tdButton);
-    tableFilms.appendChild(tr);
-}
+//     tr.appendChild(tdStart);
+//     tr.appendChild(tdName);
+//     tr.appendChild(tdGenre);
+//     tr.appendChild(tdButton);
+//     tableFilms.appendChild(tr);
+// };
 
 //burger
-
-// document.getElementById("trigger").onclick = function() {
-//     open()
-//   };
-  
-//   function open() {
-//     document.getElementById("menu").classList.toggle("show");
-//   }
-
-// document.getElementsByClassName('menu__burger')[0].onclick = function(){
-//     if(document.getElementsByClassName('block01__nav li')[0].style.display == 'block')
-//       document.getElementsByClassName('block01__nav li')[0].style.display = 'none';
-//     else
-//       document.getElementsByClassName('block01__nav li')[0].style.display = 'block';
-//   }
+document.getElementsByClassName('menu__burger')[0].onclick = function(){
+    console.log("hello",document.getElementsByClassName('block01__nav')[0])
+    if(document.getElementsByClassName('block01__nav')[0].style.display == 'block')
+      {document.getElementsByClassName('block01__nav')[0].style.display = 'none';
+    }
+    else {document.getElementsByClassName('block01__nav')[0].style.display = 'block';
+  }
+};
