@@ -44,6 +44,11 @@ html {
     font-weight: 900;
 }
 
+@font-face{
+    font-family: 'Roboto-Lihgt';
+    src: url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+
 
 img {
     max-width: 100%;
@@ -57,12 +62,12 @@ p {
 }
 .conteiner {
     max-width: 53rem;
-    padding: 0 0.9375rem;
     margin: 0 auto;
+    padding: 0 0.75rem;
 }
 .block01{
     background: url("../img/top_bg.jpg") no-repeat top center / cover;
-    min-height: 120vh;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
 }
@@ -83,7 +88,7 @@ p {
     min-height: 1px;
 }
 .block01__col1 {
-    width: 25%;
+    width: 20%;
 }
 .block01__col1 img {
     width: 188px;
@@ -93,10 +98,6 @@ p {
 .block01__col2{
     padding: 0 0.75rem;
     min-height: 1px;
-}
-
-.block01__col1 img{
-    width: 9.4rem;   
 }
 
 .block01__nav li {
@@ -117,12 +118,11 @@ p {
 }
 
 .block01__city {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     color: #ffffff;
     text-decoration: none;
-    text-transform: uppercase;
     font-family: "Roboto-Thin";
-    padding: 1.3rem 0 0;
+    margin: 0 0 -0.25rem;
 }
 
 .block01__nav a:hover{
@@ -171,9 +171,9 @@ color:green;
 .block02__info {
     position: absolute;
     right: -0.1rem;
-    top: -10.4rem;
+    top: -10rem;
     width: 50%;
-    padding: 1.7rem 1.6rem;
+    padding: 1.5rem;
     background: #fff;
     box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
     z-index: 2;
@@ -204,16 +204,6 @@ color:green;
 }
 .text-center{
     text-align: center;
-}
-
-.block02__text3 {
-    margin: 0 0 0.75rem;
-    font-size: 1.85rem;
-    font-family: "Roboto";
-    color: rgb(37, 37, 37);
-    font-weight: bold;
-    line-height: 1.2;
-    text-align: center;   
 }
 
 .block02__plus{
@@ -257,7 +247,7 @@ height: 100%;
 
 .block02__text3{
     margin: 0 0 1rem;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 900;
 }
 
@@ -325,18 +315,10 @@ height: 100%;
     max-width: 41.5rem;
 }
 
-label {
-    width: 1rem; 
-    height: 1rem; 
-    position: absolute;
-   
-   }
-
    .block03__table input[type="checkbox"] + span {
     position: absolute; /* Абсолютное позиционирование */ 
-    top: 0;
-    width: 125%; 
-    height: 125%;
+    width: 1.3rem; 
+    height: 1.3rem;
     background: url(../img/minus.svg) no-repeat; /* Фоновый рисунок */
     cursor: pointer; /* Курсор в виде руки */
    }
@@ -357,7 +339,7 @@ label {
         top: 0;
         left: 0;
         border-right: 100vw solid transparent;
-        border-top: 5.55rem solid #fff;
+        border-top: 6.55rem solid #fff;
     }
 
    .block04 {
@@ -382,8 +364,8 @@ label {
 
    .block04__logo img {
     display: block;
-    width: 16.5rem;
-    height: 16.5rem;
+    width: 15rem;
+    height: 15rem;
     top: -16rem;
     }
 
@@ -420,6 +402,10 @@ label {
         cursor: pointer;
         text-decoration: none;
     }
+    .button_1 a:hover {
+        background-color: transparent;
+        color: rgb(144, 210, 61);
+    }
 
     #submit {
         display: inline-block;
@@ -432,6 +418,7 @@ label {
         border: 0.1rem solid #90d23d;
         cursor: pointer;
         text-decoration: none;
+        margin: 0px 5rem;
     }
 
     #sendOrder{
@@ -445,6 +432,7 @@ label {
         border: 0.1rem solid #90d23d;
         cursor: pointer;
         text-decoration: none;
+        margin: 0px 6rem;
     }
 
     .block04:after {
@@ -453,7 +441,7 @@ label {
         bottom: 0;
         left: 0;
         border-left: 100vw solid transparent;
-        border-bottom: 5.55rem solid #fff;
+        border-bottom: 6.55rem solid #fff;
     }
 
     .block05 {
@@ -487,11 +475,11 @@ label {
     .block05__descr {
         display: flex;
         flex-direction: column;
-    }
+    } 
 
     .block05__descr {
         position: absolute;
-        background-color: #46c90b;
+        background-color: #90d23d;
         opacity: 0.8;
         left: 0;
         right: 0;
@@ -499,6 +487,7 @@ label {
         bottom: 0;
         padding: 24px;
         transition: 0.5s;
+        text-align: left;
     }
 
     .block05__relative:hover .block05__descr{
@@ -507,7 +496,9 @@ label {
     }
 
     .block05__bg img {
-        display: block;
+        display: block;;
+        height: 100%;
+        width: 100%;
     }
 
     .block05__text2{
@@ -523,7 +514,7 @@ label {
         width: 2.5rem;
         height: 0.25rem;
         background: #fff;
-        margin: 0 0 1rem;
+        margin: 0.65rem 9.5rem 1rem 0;
     }
 
     .block05__text3 {
@@ -544,6 +535,20 @@ label {
     .block05__linls a {
         color: #ffffff;
         font-size: 1.75rem;
+    }
+
+    .block05__linls a {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    background: white;
+    color:#90d23d;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 1rem;
     }
 
     .icon:before {
@@ -586,13 +591,21 @@ label {
         width: 2.5rem;
     }
 
+    .block07__inner__text{
+        padding-top: 1.4rem;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: 'Roboto-Lihgt';
+    }
+
     a {
         text-decoration: none;
     }
 
     .modal__form{
         max-width: 22.5rem;
-        padding: 1.25rem;
+        padding: .75rem;
+        font-size: 1rem;
     }
 
     .input-wrap {
@@ -664,9 +677,9 @@ label {
     }
 
     .order-form.big {
-        height: 480px;
-        width: 360px;
-        margin: 80px auto;
+        height: auto;
+        width: 25rem;
+        margin: 100px auto;
     }
     
     .popup-error-message {
@@ -700,7 +713,7 @@ label {
     }
     
     .popup__input_wrap {
-        margin: 0rem 1rem 1rem;
+        margin: 0rem .75rem .75rem;
     }
     
     .popup_input_text {
@@ -712,10 +725,25 @@ label {
     }
     .square {
         display: inline-block;
-        margin: 5px;
-        padding-top: 4px;
-        width: 30px;
-        height: 30px;
+        margin: 3px;
+        padding-top: 8px;
+        width: 40px;
+        height: 40px;
         background-color: #90d23d;
         border-radius: .2rem;
+        cursor: pointer;
+    }
+    .cinema-tickets {
+        text-align: center;
+    }
+    .modal__form div{
+    padding-block-end: 10px;
+    }
+
+    .bought {
+        background-color: #ffa500;
+    }
+
+    .reserve {
+        background-color: #4e4e4e;
     }

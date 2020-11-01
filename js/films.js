@@ -15,7 +15,8 @@ const mock = [
         twitter: "https://twitter.com",
         behance: "https://www.behance.net",
         price: 200,
-        room: 0
+        room: 0,
+        tickets: [10, 8]
     },
     {
         id: 2,
@@ -31,7 +32,8 @@ const mock = [
         twitter: "https://twitter.com",
         behance: "https://www.behance.net",
         price: 300,
-        room: 1
+        room: 1,
+        tickets: [3, 4, 10]
     },
     {
         id: 3,
@@ -47,7 +49,8 @@ const mock = [
         twitter: "https://twitter.com",
         behance: "https://www.behance.net",
         price: 500,
-        room: 2
+        room: 2,
+        tickets: [2, 5, 7]
     },
     {
         id: 4,
@@ -63,7 +66,8 @@ const mock = [
         twitter: "https://twitter.com",
         behance: "https://www.behance.net",
         price: 700,
-        room: 2
+        room: 2,
+        tickets: [10, 8, 15, 20]
     }
 ];
 
@@ -109,12 +113,12 @@ const rooms = [
     {
         id: 1,
         name: "L",
-        count: 20
+        count: 15
     },
     {
         id: 2,
         name: "XL",
-        count: 30
+        count: 20
     }
 ];
 
@@ -260,13 +264,39 @@ const film = {
 
     renderFilmPlaces(count){
         cinemaTickets = document.getElementById('cinema-tickets');
-        for(let i= 0; i < count+1; i++){
+        countTicket = document.getElementById('orderFilmCountTicket');
+        orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice');
+        cinemaTickets.innerHTML = '';
+
+        for(let i= 1; i < count + 1; i++){
            let element = document.createElement('div');
             element.classList.add('square');
-            element.innerHTML = 1;
-            cinemaTickets.append(element)
+           //проверка забронированных
+           this.tickets.forEach (item => {
+               if (item === i){
+               element.classList.add('bought')
+               }
+           })
+
+           element.innerHTML = i;
+           element.setAttribute('data-plase', 1)
+            cinemaTickets.append(element);
+            element.onclick =() => {
+                if(event.target.classList.contains('bought')){
+                    alert('Место заблокировано')
+                } else if (!event.target.classList.contains('reserve')){
+                    event.target.classList.add('reserve');
+                    countTicket.innerHTML = parseInt(countTicket.innerHTML) + 1;
+                    orderFilmTotalPrice.innerHTML = this.price * parseInt(countTicket.innerHTML);
+                } else {
+                    event.target.classList.remove('reserve');
+                    countTicket.innerHTML = parseInt(countTicket.innerHTML) - 1;
+                    orderFilmTotalPrice.innerHTML = this.price * parseInt(countTicket.innerHTML);
+                }
+                
+            }
         }
-    },
+    }
 };
 
 //Билеты на фильмы
@@ -283,7 +313,6 @@ for (let i = 0; i < filmsHire.length; i++) {
         filmRoom = film.getRoom.bind(currentFilm)(),
         filmRowHTML = film.renderFilmRow.bind(currentFilm)(),
         tr = document.createElement("tr"); //содаем DOM элемент TR;
-        film.renderFilmPlaces.bind(currentFilm)(filmRoom.count);
 
     tr.innerHTML = filmRowHTML; //записываем в DOM элемент HTML разметку
 
@@ -293,29 +322,29 @@ for (let i = 0; i < filmsHire.length; i++) {
         // 1. Находим элемент с формой заказ
         // 2. Изменить состояние из display: none -> display: block;
         // 3. Отобразить данные по бронированию фильма
-    
+        film.renderFilmPlaces.bind(currentFilm)(filmRoom.count);
         orderForm.style.display = 'block';
     
         let orderFilmName = document.getElementById('orderFilmName'),
             orderFilmStart = document.getElementById('orderFilmStart'),
             orderFilmGanar = document.getElementById('orderFilmGanar'),
             orderFilmPrice = document.getElementById('orderFilmPrice'),
-            orderFilmRoom = document.getElementById('orderFilmRoom');
-    
-        orderFilmName.innerHTML = filmName;
-        orderFilmStart.innerHTML = filmStart;
-        orderFilmGanar.innerHTML = filmGanars;
-        orderFilmPrice.innerHTML = filmPrice;
-        orderFilmRoom.innerHTML = filmRoom.name;
-
-        let orderFilmCountTicket = document.getElementById('orderFilmCountTicket'),
+            orderFilmRoom = document.getElementById('orderFilmRoom'),
+            orderFilmCountTicket = document.getElementById('orderFilmCountTicket'),
             orderFilmTotalPrice = document.getElementById('orderFilmTotalPrice');
-    
-        orderFilmTotalPrice.innerHTML = filmPrice * orderFilmCountTicket.value;
-    
-        orderFilmCountTicket.onchange = function () {
-          orderFilmTotalPrice.innerHTML = filmPrice * orderFilmCountTicket.value;
-        }
+            
+            orderFilmTotalPrice.innerHTML = ''
+            orderFilmCountTicket.innerHTML = 0
+
+            orderFilmName.innerHTML = filmName;
+            orderFilmStart.innerHTML = filmStart;
+            orderFilmGanar.innerHTML = filmGanars;
+            orderFilmPrice.innerHTML = filmPrice;
+            orderFilmRoom.innerHTML = filmRoom.name;
+
+       
+
+            orderFilmTotalPrice.innerHTML = filmPrice * parseInt(orderFilmCountTicket.innerHTML);
     }
 
     tableDOM.appendChild(tr); //добавляем в DOM элемент таблицы DOM элемент строки с фильмом
@@ -329,17 +358,3 @@ let closeOrderForm = document.getElementById('closeOrderFrom');
 closeOrderForm.onclick = function () {
     orderForm.style.display = 'none';
 }
-
-// Валидация ввода имени
-/** РАЗОБРАТЬ Event Handler */
-let sendOrder = document.getElementById('sendOrder');
-sendOrder.onclick = function () {
-  let orderClinetName = document.getElementById('orderClinetName');
-
-  if (orderClinetName.value) {
-    orderClinetName.style.border = '1px solid #bebebe';
-  } else {
-    orderClinetName.style.border = '2px solid red';
-  }
-}
-
