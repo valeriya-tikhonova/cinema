@@ -84,11 +84,11 @@ p {
 }
 
 .block01__row div{
-    padding: 0 0.75rem;
     min-height: 1px;
 }
 .block01__col1 {
     width: 20%;
+    padding: 0 0.75rem;
 }
 .block01__col1 img {
     width: 188px;
@@ -122,7 +122,7 @@ p {
     color: #ffffff;
     text-decoration: none;
     font-family: "Roboto-Thin";
-    margin: 0 0 -0.25rem;
+    margin: 0 0 0 2rem;
 }
 
 .block01__nav a:hover{
